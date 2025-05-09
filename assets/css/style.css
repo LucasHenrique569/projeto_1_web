@@ -5,16 +5,46 @@
 body {
     margin: 0;
 }
+main{
+    margin-top: 80px    ;
+}
 header,
 #navbar {
     display: flex;
 }
 header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    transition: top 0.3s ease;
     width: 100%;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
     padding: 10px 5%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.card{
+    flex: 0 0 580px;
+    scroll-snap-align: start;
+}
+
+.carousel-buttons{
+    margin: 20px 0;
+    text-align: center;
+}
+
+.carousel-buttons button{
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 5px;
+
 }
 li {
     list-style: none;
@@ -76,13 +106,27 @@ a {
     text-align: center;
     margin-top: 20px;
 }
-.banner-meio-2{
+#banner-meio-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+#banner-meio-2 div img{
+    width: 98%;
+    border-radius: 10px;
+}
+#banner-meio-2 p{
+    color: #718093;
+}
+.banner-meio-3{
     display: flex;
     width: 100%;
     justify-content: space-evenly;
     text-align: center;
 }
-.banner-meio-2 div{
+.banner-meio-3 div{
     padding-top: 30px;
     width: 33%;
 }
@@ -162,4 +206,36 @@ a {
     width: 300px;
     text-align: center;
     padding: 5px;
+}
+
+.menu-btn{
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #333;
+}
+
+.button:hover {
+    background-color: #010327;
+    padding: 10px 50px;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+
+.menu-btn{
+    display: none;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #333;
+}
+
+@media only screen and (max-width: 640px){
+    #banner {
+        height: 37vh;
+    }
 }
