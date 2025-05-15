@@ -63,7 +63,7 @@ a {
     color: #000;
 }
 #banner {
-    background-image: url('/projeto_1_web/assets/images/image_inicial_2.jpg');
+    background-image: url('../images/image_inicial_2.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
